@@ -1,20 +1,20 @@
 var fs = require('fs');
 var path = require('path');
+var fileArray = [];
 
 
-module.exports = function (fileList, extension, callback) {
+module.exports = function(fileList, extension, callback) {
 
 fs.readdir(fileList, function(err,directory) {
 
   if (err)
   return callback(err);
 
-  for (i = 0; i < directory.length; i++) {
-    if (path.extname(directory[i]) === '.' + extension) {
-      console.log(directory[i]);
+  var filteredFiles = files.filter(function (file) {}
+   return path.extname(file) === "." + extension;)
   }
 
-  callback(null, list)
+  callback(null, filteredFiles);
   }
 });
 }
